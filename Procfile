@@ -1,1 +1,1 @@
-web: gunicorn image_convertor:image_convertor
+web: gunicorn server: server

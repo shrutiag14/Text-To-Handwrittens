@@ -15,7 +15,7 @@ class convertor:
             pass
         else:
             char.lower()
-            cases = Image.open("letters/%s.png"%char)
+            cases = Image.open("Letters/%s.png"%char)
             self.BG.paste(cases, (self.gap, self._))
             size = cases.width
             self.gap += size
@@ -68,7 +68,7 @@ class convertor:
                 self.worddd(self.p[i])
                 self.writee('\n')
                 self.BG.save('%d.png'%i)
-                BG1= Image.open("letters/bg.png")
+                BG1= Image.open("Letters/bg.png")
                 self.BG=BG1
                 self.gap = 0
                 self._ =0

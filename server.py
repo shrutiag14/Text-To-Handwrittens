@@ -4,7 +4,7 @@ import image_convertor as imgc
 app = Flask(__name__)
 
 imagelist = []
-BG = imgc.Image.open("letters/bg.png")
+BG = imgc.Image.open("Letters/bg.png")
 sizeOfSheet =BG.width
 allowedChars = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM,.-?!() 1234567890'
 
@@ -39,4 +39,4 @@ def download():
     return send_file("final.pdf", as_attachment=True)
 
 if __name__ == "__main__":
-   app.run(debug = True)
+   app.run(threaded = True)

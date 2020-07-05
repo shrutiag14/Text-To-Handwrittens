@@ -4,7 +4,7 @@ import image_convertor as imgc
 app = Flask(__name__)
 
 imagelist = []
-BG = imgc.Image.open("letters/bg.png")
+BG = imgc.Image.open("Letters/bg.png")
 sizeOfSheet =BG.width
 allowedChars = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM,.-?!() 1234567890'
 

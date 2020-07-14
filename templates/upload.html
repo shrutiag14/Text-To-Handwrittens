@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172634257-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -12,7 +13,7 @@
 </script>
 <style>
 @media screen and (min-width: 400px){
-  h1.center {
+	h1.center {
   text-align: center;
   color: black;
   padding: 1%;
@@ -28,7 +29,7 @@ p.center {
   display: block;
 }
 p.large {
-  font-size: 60%;
+  font-size: 100%;
 }
 body, html {
   height: 100%;
@@ -85,7 +86,7 @@ p.git {
   margin-bottom: 0;
 }
 a{
-  color: white;
+	color: white;
 }
 }
 @media screen and (min-width: 800px){
@@ -161,7 +162,7 @@ p.git {
 
 }
 a{
-  color: white;
+	color: white;
 }
 }
 </style>
@@ -170,23 +171,22 @@ a{
 <h1 class="center large">Text To Handwritten</h1>
 <p class="center large"><b>Assignments are kinda boring when it comes to writing long pages, so we Here, provide you a super simple software in which you only have to Upload .txt file of your work and then by clicking the submit button, you will be redirected to a new page, in which you can Download your work in pdf format</b>.</p>
 
+
+
 <div class="bg-image"></div>
 
 <div class="bg-text">
-  
-    <p>File uploaded successfully</p>  
-    <p>File Name: {{name}}</p>
+  <form action="/success" method="post" enctype="multipart/form-data">
+      <p style="font-size:30px;">Upload your file:</p>
+      <input type="file" name="file"/>   <br>
+      <input type="submit" value="Upload">
+    </form>
+    <p class="git">If you want to add your own font, <a href="https://github.com/shrutiag14/Text-To-Handwrittens">click here</a> and clone this repository. After that, add your font on the letter folder and run at your local server.</p>
 
-      <form class="" action="/download" method="POST">
-        <div class="">
-          <button class="" type="submit">
-          Download pdf
-          </button>
-        </div>
-      </form>
-      <p class="git">If you want to add your own font, <a href="https://github.com/shrutiag14/Text-To-Handwrittens">click here</a> and clone this repository. After that, add your font on the letter folder and run at your local server.</p>
-    
 </div>
+
+
+
 
 </body>
 </html>

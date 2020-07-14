@@ -2,13 +2,33 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172634257-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-172634257-1');
+</script>
 <style>
+@media screen and (min-width: 400px){
+  h1.center {
+  text-align: center;
+  color: black;
+  padding: 1%;
+}
+h1.large {
+  font-size: 250%;
+}
 p.center {
   text-align: center;
   color: black;
+  margin-bottom: 2%;
+  padding: 2%;
+  display: block;
 }
 p.large {
-  font-size: 300%;
+  font-size: 60%;
 }
 body, html {
   height: 100%;
@@ -22,10 +42,10 @@ body, html {
 
 .bg-image {
   /* The image used */
-  background-image: url("/static/images.jpg");
+  background-image: url("images.jpeg");
   
   /* Add the blur effect */
-  filter: blur(8px);
+  filter: blur(6px);
   -webkit-filter: blur(8px);
   
   /* Full height */
@@ -45,18 +65,110 @@ body, html {
   font-weight: bold;
   border: 3px solid #f1f1f1;
   position: absolute;
-  top: 50%;
+  top: 90%;
   left: 50%;
+  margin-top: 4%;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 80%;
   padding: 20px;
+  padding-bottom: 0;
   text-align: center;
+}
+p.git {
+  text-align: left;
+  color: white;
+  top: 100%;
+  margin-top: 5%;
+  font-size: 60%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+a{
+  color: white;
+}
+}
+@media screen and (min-width: 800px){
+h1.center {
+  text-align: center;
+  color: black;
+  padding: 1%;
+}
+h1.large {
+  font-size: 350%;
+}
+p.center {
+  text-align: center;
+  color: black;
+  margin-bottom: 2%;
+}
+p.large {
+  font-size: 70%;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("images.jpeg");
+  
+  /* Add the blur effect */
+  filter: blur(6px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-top: 4%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  padding-bottom: 0%;
+  text-align: center;
+}
+p.git {
+  text-align: left;
+  color: white;
+  top: 100%;
+  margin-top: 5%;
+  font-size: 80%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+
+}
+a{
+  color: white;
+}
 }
 </style>
 </head>
 <body>
-<p class="center large">Text To Handwritten</p>
+<h1 class="center large">Text To Handwritten</h1>
+<p class="center large"><b>Assignments are kinda boring when it comes to writing long pages, so we Here, provide you a super simple software in which you only have to Upload .txt file of your work and then by clicking the submit button, you will be redirected to a new page, in which you can Download your work in pdf format</b>.</p>
 
 <div class="bg-image"></div>
 
@@ -72,6 +184,7 @@ body, html {
           </button>
         </div>
       </form>
+      <p class="git">If you want to add your own font, <a href="https://github.com/shrutiag14/Text-To-Handwrittens">click here</a> and clone this repository. After that, add your font on the letter folder and run at your local server.</p>
     
 </div>
 

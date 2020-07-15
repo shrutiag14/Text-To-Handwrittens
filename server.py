@@ -8,15 +8,19 @@ BG = imgc.Image.open("Letters/bg.png")
 sizeOfSheet =BG.width
 allowedChars = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM,.-?!() 1234567890'
 
-def del_old():
+@app.route("/")
+def home():
     cwd = os.getcwd()
     test=os.listdir(cwd)
     for item in test:
-        if item.endswith(".pdf") or item.endswith(".png") or item.endswith(".txt"):
+        if item.endswith(".pdf"):
             os.remove(item)
-            
-@app.route("/")
-def home():
+    for item in test:
+        if item.endswith(".txt"):
+            os.remove(item)
+    for item in test:
+    	if item.endswith(".png"):
+    		os.remove(item)
     return render_template("upload.html")
 
 @app.route('/success', methods = ['POST'])  

@@ -13,10 +13,7 @@ def home():
     cwd = os.getcwd()
     test=os.listdir(cwd)
     for item in test:
-        if item.endswith(".pdf"):
-            os.remove(item)
-    for item in test:
-        if item.endswith(".txt"):
+        if item.endswith(".pdf") or item.endswith(".png") or item.endswith(".txt"):
             os.remove(item)
     return render_template("upload.html")
 

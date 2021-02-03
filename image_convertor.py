@@ -1,7 +1,7 @@
 from PIL import Image
 
 class convertor:
-    def __init__(self,BG,sizeOfSheet,allowedChars):
+    def __init__(self,BG,sizeOfSheet,allowedChars): 
         self.BG = BG
         self.sizeOfSheet = sizeOfSheet
         self.gap = 0
@@ -12,9 +12,9 @@ class convertor:
 
     def writee(self,char):
         if char == '\n':
-            pass
+            pass                    
         else:
-            char.lower()
+            char.lower()                                          
             cases = Image.open("Letters/%s.png"%char)
             self.BG.paste(cases, (self.gap, self._))
             size = cases.width
